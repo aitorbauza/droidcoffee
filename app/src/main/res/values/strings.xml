@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">droidcafe</string>
+    <string-array name="CART">
+        <item >ORDER</item>
+        <item >STATUS</item>
+        <item >FAVORITES</item>
+        <item >CONTACT</item>
+    </string-array>
+
+    <string-array name="PHONE">
+        <item> HOME </item>
+        <item> WORK </item>
+        <item> MOBILE </item>
+        <item> OTHER </item>
+
+    </string-array>
+</resources>

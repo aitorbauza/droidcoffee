@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#D7AC6A"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="Droid Cafe"
+        android:layout_alignParentTop="true"/>
+
+    <!-- XML del set TextView -->
+    <TextView
+        android:id="@+id/textView_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="16dp"
+        android:text="You ordered a dessert."
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <!-- Campos -->
+    <EditText
+        android:id="@+id/editText_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView_header"
+        android:layout_marginTop="16dp"
+        android:hint="Name" />
+
+    <EditText
+        android:id="@+id/editText_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editText_name"
+        android:layout_marginTop="8dp"
+        android:hint="Address" />
+
+    <EditText
+        android:id="@+id/editText_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editText_address"
+        android:layout_marginTop="8dp"
+        android:hint="Phone" />
+
+    <!-- Spinner  -->
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editText_phone"
+        android:layout_marginTop="16dp"/>
+
+    <!-- EditText para ingresar un teléfono adicional -->
+    <EditText
+        android:id="@+id/enter_phone"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinner2"
+        android:layout_marginTop="16dp"
+        android:hint="Enter phone"
+        android:inputType="phone"/>
+
+    <EditText
+        android:id="@+id/editText_note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/enter_phone"
+        android:layout_marginTop="8dp"
+        android:hint="Note" />
+
+    <!-- Texto para el RadioGroup  -->
+    <TextView
+        android:id="@+id/textView_deliveryMethod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editText_note"
+        android:layout_marginTop="16dp"
+        android:text="Choose a delivery method:"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <!-- RadioGroup  -->
+    <RadioGroup
+        android:id="@+id/radioGroup_delivery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView_deliveryMethod"
+        android:layout_marginTop="8dp">
+
+        <RadioButton
+            android:id="@+id/radio_same_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Same day messenger service" />
+
+        <RadioButton
+            android:id="@+id/radio_next_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Next day ground delivery" />
+
+        <RadioButton
+            android:id="@+id/radio_pick_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pick up" />
+    </RadioGroup>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioGroup_delivery"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="340dp"
+        android:clickable="true"
+        app:srcCompat="@drawable/cart" />
+
+</RelativeLayout>
